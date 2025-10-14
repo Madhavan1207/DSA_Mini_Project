@@ -32,3 +32,7 @@ This project simulates basic banking operations such as **creating accounts, dep
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/<your-repo-name>.git
+## 👨‍💻 Author
+**Madhavan Kathirvel Nadar**  
+💼 IT Student | Passionate about Web Development  
+⭐ If you liked this project, don’t forget to **star this repo!**
