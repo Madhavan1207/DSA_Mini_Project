@@ -2,26 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Account Summary</title>
+  <title>Finance App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="app-container">
     <header>
-      <h1>My Account Summary</h1>
-      <a href="index.html" class="back-link">← Back to Banking</a>
+      <h1>MyFinance</h1>
+      <div class="balance-card">
+        <div>
+          <p class="label">Balance</p>
+          <p class="value" id="balanceDisplay">₹0.00</p>
+        </div>
+        <div>
+          <p class="label">Tax Estimate</p>
+          <p class="value" id="taxDisplay">₹0.00</p>
+        </div>
+      </div>
     </header>
 
-    <section class="section account-list">
-      <h2>Account Details</h2>
-      <ul id="accountList"></ul>
+    <section class="section">
+      <h2>Account Setup</h2>
+      <input type="text" id="accountName" placeholder="Account Name">
+      <button onclick="createAccount()">Create Account</button>
     </section>
 
-    <section class="section analytics">
-      <h2>Deposit vs Withdraw</h2>
-      <canvas id="balanceChart"></canvas>
+    <section class="section">
+      <h2>Transaction</h2>
+      <input type="number" id="amount" placeholder="Amount">
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+    </section>
+
+    <section class="section">
+      <h2>Actions</h2>
+      <button onclick="checkBalance()">Check Balance</button>
+      <button onclick="viewTransactions()">View Transactions</button>
+      <button onclick="undoLastTransaction()">Undo Last Transaction</button>
+    </section>
+
+    <section class="section transaction-list">
+      <h2>Transactions</h2>
+      <ul id="transactionHistory"></ul>
+    </section>
+
+    <section class = "section">
+      <h2>Summary</h2>
+      <a href="accounts.html" class="link-button">View My Summary</a>
     </section>
 
     <footer>
@@ -29,6 +57,6 @@
     </footer>
   </div>
 
-  <script src="accounts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
